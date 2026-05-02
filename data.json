@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Surakshya Khatri",
+    "address": "Bardiya"
+  },
+  {
+    "id": 2,
+    "name": "Prakash Pariyar",
+    "address": "Salyan"
+  },
+  {
+    "id": 3,
+    "name": "Prabin Basnet",
+    "address": "Nepalgunj"
+  },
+  {
+    "id": 4,
+    "name": "Manoj Bhandari",
+    "address": "Bajura"
+  },
+  {
+    "id": 5,
+    "name": "Kiran Dangi",
+    "address": "Kohalpur"
+  },
+  {
+    "id": 6,
+    "name": "Sushma Thaha Magar",
+    "address": "Rajha"
+  }
+]
