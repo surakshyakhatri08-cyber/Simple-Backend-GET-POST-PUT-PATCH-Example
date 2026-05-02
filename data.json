@@ -5,11 +5,6 @@
     "address": "Bardiya"
   },
   {
-    "id": 2,
-    "name": "Prakash Pariyar",
-    "address": "Salyan"
-  },
-  {
     "id": 3,
     "name": "Prabin Basnet",
     "address": "Nepalgunj"
@@ -23,10 +18,5 @@
     "id": 5,
     "name": "Kiran Dangi",
     "address": "Kohalpur"
-  },
-  {
-    "id": 6,
-    "name": "Sushma Thaha Magar",
-    "address": "Rajha"
   }
 ]

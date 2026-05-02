@@ -69,6 +69,8 @@ def get_user_detail(user_id: int):
     # return {"id": user_id, "Name": "", "Address": ""}
 
 
+
+# for post
 @app.post("/users")
 def create_user(create_user_payload: CreateUserRequest):
 
@@ -126,6 +128,7 @@ def update_user(user_id: int, update_user_payload: CreateUserRequest):
     }
 
 
+# for patch
 @app.patch("/users/{user_id}")
 def patch_user(user_id: int, update_user_payload: UpdateUserRequest):
 
@@ -154,4 +157,32 @@ def patch_user(user_id: int, update_user_payload: UpdateUserRequest):
     return {
         "message": "User patched successfully",
         "user": user
+    }
+
+
+# for delete
+@app.delete("/users/{user_id}")
+def delete_user(user_id: int):
+
+    # read existing users
+    with open("data.json", "r") as file:
+        data = json.load(file)
+
+    # find user index
+    user_index = next((i for i, user in enumerate(data) if user["id"] == user_id), None)
+
+    if user_index is None:
+        return JSONResponse(
+            status_code=404,
+            content={"message": f"User with id {user_id} does not exist"}
+        )
+
+    deleted_user = data.pop(user_index)
+
+    with open("data.json", "w") as file:
+        json.dump(data, file, indent=2)
+
+    return {
+        "message": "User deleted successfully",
+        "user": deleted_user
     }
